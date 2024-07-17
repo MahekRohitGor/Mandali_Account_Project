@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Portfolio from './components/Portfolio';
+import './index.css';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -12,8 +13,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+        <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </div>
