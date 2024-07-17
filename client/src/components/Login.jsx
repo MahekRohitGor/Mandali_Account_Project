@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../services/authService';
+import Header from './Header';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -22,6 +23,8 @@ const Login = () => {
   };
 
   return (
+    <>
+    <Header/>
     <div style={styles.container}>
       <form style={styles.form} onSubmit={handleSubmit}>
         <h2 style={styles.heading}>Log in to your account</h2>
@@ -46,6 +49,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 
@@ -54,7 +58,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '100vh',
+    minHeight: '90vh',
     backgroundColor: '#F3F4F6',
   },
   form: {
